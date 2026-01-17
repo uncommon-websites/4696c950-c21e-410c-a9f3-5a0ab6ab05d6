@@ -1,84 +1,90 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-    // Placeholder data
+    // Partner data - Law firms, certifiers, and notified bodies
     const partners = [
-        { name: 'MITRE', src: 'https://placehold.co/80x30?text=MITRE' },
-        { name: 'Stanford', src: 'https://placehold.co/80x30?text=Stanford' },
-        { name: 'Google Cloud', src: 'https://placehold.co/80x30?text=Google' },
-        { name: 'Newfront', src: 'https://placehold.co/80x30?text=Newfront' },
-        { name: 'Cisco', src: 'https://placehold.co/80x30?text=Cisco' },
-        { name: 'MongoDB', src: 'https://placehold.co/80x30?text=MongoDB' },
-        { name: 'Orrick', src: 'https://placehold.co/80x30?text=Orrick' },
-        { name: 'Cognition', src: 'https://placehold.co/80x30?text=Cognition' },
-        { name: 'Ada', src: 'https://placehold.co/80x30?text=Ada' },
-        { name: 'CoreWeave', src: 'https://placehold.co/80x30?text=CoreWeave' },
-        { name: 'Alpharum', src: 'https://placehold.co/80x30?text=Alpharum' },
-        { name: 'Virtue AI', src: 'https://placehold.co/80x30?text=Virtue' },
-        { name: 'Hale Labs', src: 'https://placehold.co/80x30?text=Hale' },
-        { name: 'Axiora', src: 'https://placehold.co/80x30?text=Axiora' },
-        { name: 'Faculty', src: 'https://placehold.co/80x30?text=Faculty' },
-        { name: 'Gray Swan', src: 'https://placehold.co/80x30?text=GraySwan' },
-        { name: 'Witness AI', src: 'https://placehold.co/80x30?text=Witness' },
-        { name: 'Newfront', src: 'https://placehold.co/80x30?text=Newfront' },
-        { name: 'Carnegie Mellon', src: 'https://placehold.co/80x30?text=CMU' },
-        { name: 'Fin', src: 'https://placehold.co/80x30?text=Fin' },
-        { name: 'UiPath', src: 'https://placehold.co/80x30?text=UiPath' },
+        { name: 'TÜV SÜD', src: '' },
+        { name: 'DEKRA', src: '' },
+        { name: 'Clifford Chance', src: '' },
+        { name: 'Latham & Watkins', src: '' },
+        { name: 'BSI', src: '' },
+        { name: 'Allen & Overy', src: '' },
+        { name: 'Freshfields', src: '' },
+        { name: 'DLA Piper', src: '' },
+        { name: 'SGS', src: '' },
+        { name: 'Eurofins', src: '' },
+        { name: 'Linklaters', src: '' },
+        { name: 'Bird & Bird', src: '' },
+        { name: 'White & Case', src: '' },
+        { name: 'Baker McKenzie', src: '' },
+        { name: 'Osborne Clarke', src: '' },
+        { name: 'Hogan Lovells', src: '' },
+        { name: 'Intertek', src: '' },
+        { name: 'Applus+', src: '' },
+        { name: 'Bureau Veritas', src: '' },
+        { name: 'Taylor Wessing', src: '' },
+        { name: 'CMS', src: '' },
     ];
 
     const articles = [
         {
-            tag: 'Article',
-            title: 'Case study: How Intercom built',
-            desc: 'Intercom achieved AIUC-1 certification of their AI agent, Fin',
-            img: 'https://placehold.co/300x200/E8E8E3/1a1a1a?text=Fin',
-            bg: 'bg-[#E8E8E3]'
+            tag: 'Compliance',
+            title: 'The AIA Compliance Roadmap',
+            desc: 'A step-by-step guide for high-risk AI providers to meet 2026 deadlines.',
+            img: '/generated/image-a-close-up-of-a-high-quality-printed-doc-1768668460004-2.webp',
+            bg: 'bg-primary-50'
         },
         {
-            tag: 'Research',
-            title: 'AI-Proofing The Board and C-suite',
-            desc: 'Dr. Keri Pearlson at MIT Sloan and Rajiv Dattani at AIUC have written a new paper.',
-            img: 'https://placehold.co/300x200/D4C5A3/1a1a1a?text=AI-proofing',
-            bg: 'bg-[#D4C5A3]'
+            tag: 'Regulation',
+            title: 'Annex IV Deep Dive',
+            desc: 'Everything you need to include in your technical documentation for CE-marking.',
+            img: 'https://placehold.co/300x200/D4C5A3/1a1a1a?text=Annex+IV',
+            bg: 'bg-gray-100'
         },
         {
-            tag: 'Research',
-            title: 'Stanford Trustworthy AI Research x AIUC',
-            desc: 'Stanford Professor Dr. Sanmi Koyejo on real-world AI risk for enterprises',
-            img: 'https://placehold.co/300x200/E8E8E3/1a1a1a?text=Stanford',
-            bg: 'bg-[#E8E8E3]'
+            tag: 'Standards',
+            title: 'ISO/IEC 42001 & the AI Act',
+            desc: 'How to align your AI Management System with European legal requirements.',
+            img: 'https://placehold.co/300x200/E8E8E3/1a1a1a?text=ISO+42001',
+            bg: 'bg-primary-100'
         },
         {
-            tag: 'Research',
-            title: 'Orrick x AIUC partner on AIUC-1',
-            desc: 'AIUC and top AI law firm Orrick, Herrington & Sutcliffe have partnered to create AIUC-1.',
-            img: 'https://placehold.co/300x200/F0E6D2/1a1a1a?text=Orrick',
-            bg: 'bg-[#F0E6D2]'
+            tag: 'Strategy',
+            title: 'GPAI Provider Obligations',
+            desc: 'The specific requirements for General Purpose AI models under the new rules.',
+            img: 'https://placehold.co/300x200/F0E6D2/1a1a1a?text=GPAI',
+            bg: 'bg-gray-200'
         }
     ];
 
     const testimonials = [
         {
-            quote: "We need a SOC 2 for AI agents - a familiar, actionable standard for security and trust.",
-            author: "Phil Venables",
-            role: "Former CISO",
-            company: "Google Cloud",
-            img: "https://placehold.co/400x500/gray/white?text=Phil"
+            quote: "AIA Conformity provides the structured legal logic we need to bridge the gap between engineering and compliance.",
+            author: "Dr. Elena Vance",
+            role: "Head of AI Compliance",
+            company: "European Tech Group",
+            img: "/generated/image-a-professional-woman-in-her-40s-legal-or-1768668457667-1.webp"
         }
     ];
 </script>
 
-<div class="min-h-screen bg-white text-gray-900 font-sans selection:bg-gray-200">
+<div class="min-h-screen bg-white text-gray-900 font-sans selection:bg-primary-100">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
-        <div class="max-w-[1600px] mx-auto px-6 py-6 flex justify-between items-start">
-            <div class="w-64">
-                <a href="/" class="text-sm font-medium leading-tight block max-w-[160px]">
-                    Artificial Intelligence<br>Underwriting Company
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-[1600px] mx-auto px-6 py-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-primary-600 rounded-sm flex items-center justify-center text-white font-bold text-xl">C</div>
+                <a href="/" class="text-sm font-bold tracking-tight uppercase">
+                    AIA Conformity
                 </a>
             </div>
-            <div>
-                <a href="#" class="bg-black text-white px-5 py-2.5 text-xs font-medium rounded-sm hover:bg-gray-800 transition-colors">
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-6 text-xs font-medium uppercase tracking-wider text-gray-500">
+                    <a href="#" class="hover:text-primary-600 transition-colors">Platform</a>
+                    <a href="#" class="hover:text-primary-600 transition-colors">AIA Guide</a>
+                    <a href="#" class="hover:text-primary-600 transition-colors">Partners</a>
+                </nav>
+                <a href="#" class="bg-primary-900 text-white px-5 py-2.5 text-xs font-medium rounded-sm hover:bg-primary-800 transition-colors">
                     Request a Demo
                 </a>
             </div>
@@ -89,12 +95,12 @@
         <div class="max-w-[1600px] mx-auto px-6 grid grid-cols-12 gap-8">
             <!-- Sidebar Navigation -->
             <div class="col-span-2 hidden lg:block sticky top-32 h-fit">
-                <nav class="flex flex-col space-y-3 text-xs text-gray-500 font-medium">
-                    <a href="#" class="text-black">Home</a>
-                    <a href="#" class="hover:text-black transition-colors">Product</a>
-                    <a href="#" class="hover:text-black transition-colors">AIUC-1</a>
-                    <a href="#" class="hover:text-black transition-colors">Research</a>
-                    <a href="#" class="hover:text-black transition-colors">Team</a>
+                <nav class="flex flex-col space-y-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest">
+                    <a href="#" class="text-primary-600">Overview</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors">Inventory</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors">Legal Logic</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors">Documentation</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors">Risk Register</a>
                 </nav>
             </div>
 
@@ -103,25 +109,27 @@
                 
                 <!-- Hero Section -->
                 <section class="relative">
-                    <div class="relative w-full h-[600px] overflow-hidden rounded-sm">
-                        <!-- Mountain Background Placeholder -->
-                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop" alt="Snowy mountains" class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="relative w-full h-[650px] overflow-hidden rounded-sm">
+                        <img src="/generated/image-a-clean-minimalist-high-tech-office-in-b-1768668454859-0.webp" alt="Modern office" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-white/40"></div>
                         
                         <div class="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
-                            <h1 class="text-4xl md:text-5xl font-normal text-gray-900 mb-12 max-w-2xl leading-tight">
-                                Certify and insure AI agents<br>to unlock enterprise adoption
+                            <h1 class="text-5xl md:text-7xl font-light text-gray-950 mb-8 max-w-4xl leading-[1.1] tracking-tight">
+                                AI compliance you <br><span class="italic font-serif">can prove.</span>
                             </h1>
+                            <p class="text-lg text-gray-700 mb-12 max-w-xl leading-relaxed">
+                                Deliver provable AIA conformity via automated inventory, legal logic, and documentation workflows.
+                            </p>
 
                             <!-- Logos Card -->
-                            <div class="bg-white/95 backdrop-blur-sm p-8 rounded-sm shadow-sm max-w-4xl w-full">
-                                <p class="text-[10px] text-gray-500 mb-6 uppercase tracking-wide">
-                                    Customers, partners & technical contributors securing AI progress with standards, audits, and insurance.
+                            <div class="bg-white/95 backdrop-blur-md p-8 rounded-sm shadow-xl max-w-5xl w-full border border-gray-100">
+                                <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-[0.2em] font-bold">
+                                    Working with leading legal partners, certifiers, and notified bodies
                                 </p>
-                                <div class="grid grid-cols-4 md:grid-cols-7 gap-8 items-center justify-items-center opacity-80 grayscale">
+                                <div class="grid grid-cols-3 md:grid-cols-7 gap-y-10 gap-x-4 items-center justify-items-center opacity-70 grayscale">
                                     {#each partners as partner}
-                                        <div class="h-6 flex items-center justify-center">
-                                            <!-- Using text as placeholder for logos to keep it clean if images fail, but trying to use the src -->
-                                            <span class="text-[10px] font-bold text-gray-800">{partner.name}</span>
+                                        <div class="h-4 flex items-center justify-center">
+                                            <span class="text-[9px] font-black text-gray-900 tracking-tighter uppercase whitespace-nowrap">{partner.name}</span>
                                         </div>
                                     {/each}
                                 </div>
@@ -130,154 +138,119 @@
                     </div>
                 </section>
 
-                <!-- How AIUC Unlocks Section -->
+                <!-- Features Section -->
                 <section>
                     <div class="flex justify-between items-baseline mb-24 border-b border-gray-100 pb-4">
-                        <h2 class="text-3xl font-light text-gray-900 max-w-xl leading-tight">
-                            How AIUC unlocks secure AI adoption for enterprises
+                        <h2 class="text-4xl font-light text-gray-900 max-w-2xl leading-tight">
+                            Compliance is now a product, <br><span class="text-primary-600">not a guessing game.</span>
                         </h2>
-                        <span class="text-[10px] text-gray-400 uppercase tracking-wider">Our solution</span>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">The Platform</span>
                     </div>
 
-                    <div class="relative min-h-[800px]">
-                        <!-- Diagram (Sticky/Fixed positioning simulation) -->
-                        <div class="absolute right-0 top-0 w-1/2 p-8 bg-gray-50 rounded-sm">
-                            <div class="text-[10px] text-gray-500 mb-4">3 - And insures their customers against</div>
-                            <div class="flex items-center justify-between gap-4">
-                                <div class="w-32 h-32 bg-black text-white flex flex-col items-center justify-center p-4 rounded-sm">
-                                    <div class="mb-2">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                                    </div>
-                                    <span class="text-[10px] uppercase tracking-wider">AI Company</span>
-                                </div>
-                                
-                                <div class="flex-1 h-32 bg-blue-100/50 border border-blue-200 rounded-sm flex flex-col items-center justify-center relative">
-                                    <span class="text-[10px] text-gray-500 uppercase absolute top-2 left-4">Insurance</span>
-                                    <div class="w-full border-t border-dashed border-gray-300 absolute top-1/2"></div>
-                                    
-                                    <!-- Certificate Icon -->
-                                    <div class="absolute -bottom-6 bg-white border border-gray-200 p-2 shadow-sm rounded-sm flex items-center gap-2">
-                                        <div class="w-8 h-10 border border-gray-300 flex items-center justify-center bg-gray-50">
-                                            <div class="w-4 h-4 rounded-full border border-gray-400"></div>
-                                        </div>
-                                        <div class="text-[8px] leading-tight text-gray-500">
-                                            AIUC-1<br>CERTIFICATION
-                                        </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                        <div class="space-y-16">
+                            <div class="group">
+                                <div class="flex gap-6 items-start">
+                                    <div class="w-10 h-10 rounded-full border border-primary-200 flex items-center justify-center text-primary-600 font-bold shrink-0">01</div>
+                                    <div>
+                                        <h3 class="text-xl font-medium mb-4">Automated AI Inventory</h3>
+                                        <p class="text-gray-500 leading-relaxed text-sm">
+                                            Instantly detect, classify, and track AI systems—from prototypes to production—across products and teams. Maintain a single source of truth for all your AI assets.
+                                        </p>
                                     </div>
                                 </div>
-
-                                <div class="w-32 h-32 bg-gradient-to-br from-blue-900 to-blue-700 text-white flex flex-col items-center justify-center p-4 rounded-sm">
-                                    <div class="mb-2">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            </div>
+                            <div class="group">
+                                <div class="flex gap-6 items-start">
+                                    <div class="w-10 h-10 rounded-full border border-primary-200 flex items-center justify-center text-primary-600 font-bold shrink-0">02</div>
+                                    <div>
+                                        <h3 class="text-xl font-medium mb-4">Real-time Legal Mapping</h3>
+                                        <p class="text-gray-500 leading-relaxed text-sm">
+                                            Our compliance engine links your systems to the right obligations using official AIA definitions and thresholds. No more manual cross-referencing of complex legal texts.
+                                        </p>
                                     </div>
-                                    <span class="text-[10px] uppercase tracking-wider">Enterprise</span>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex gap-6 items-start">
+                                    <div class="w-10 h-10 rounded-full border border-primary-200 flex items-center justify-center text-primary-600 font-bold shrink-0">03</div>
+                                    <div>
+                                        <h3 class="text-xl font-medium mb-4">Annex IV Documentation</h3>
+                                        <p class="text-gray-500 leading-relaxed text-sm">
+                                            Generate full technical files using guided templates that align with official EU formats. Ready for CE-marking and regulatory audits out of the box.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Text Blocks -->
-                        <div class="absolute left-0 top-[400px] max-w-xs">
-                            <div class="flex gap-4">
-                                <span class="bg-black text-white w-5 h-5 flex items-center justify-center text-xs font-medium shrink-0 rounded-sm">1</span>
-                                <p class="text-sm text-gray-600 leading-relaxed">
-                                    AI companies buy insurance to fully protect their enterprise customers in case an AI agent failure leads to business loss.
+                        <div class="bg-gray-50 rounded-sm p-12 flex flex-col justify-center border border-gray-100 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-primary-50 rounded-full -mr-32 -mt-32 opacity-50"></div>
+                            <div class="relative z-10">
+                                <div class="text-xs font-bold text-primary-600 uppercase tracking-widest mb-6">ISO 42001 Aligned</div>
+                                <h3 class="text-2xl font-light mb-6 leading-tight">Built for speed. <br>Designed for certainty.</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-8">
+                                    Log risks, responsibilities, and vendors with workflows designed to prepare you for formal AI management certification without duplicating effort.
                                 </p>
-                            </div>
-                        </div>
-
-                        <div class="absolute left-0 top-[600px] max-w-xs">
-                            <div class="flex gap-4">
-                                <span class="bg-black text-white w-5 h-5 flex items-center justify-center text-xs font-medium shrink-0 rounded-sm">2</span>
-                                <p class="text-sm text-gray-600 leading-relaxed">
-                                    Certificates and insurance create the "confidence infrastructure" enterprises need to adopt.
-                                </p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3 text-xs font-medium text-gray-700">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                        Declaration of Conformity Generator
+                                    </div>
+                                    <div class="flex items-center gap-3 text-xs font-medium text-gray-700">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                        ISO-style Risk Register
+                                    </div>
+                                    <div class="flex items-center gap-3 text-xs font-medium text-gray-700">
+                                        <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                        Vendor Management Modules
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Confidence Infrastructure Section -->
-                <section>
-                    <div class="flex justify-between items-baseline mb-16 border-b border-gray-100 pb-4">
-                        <h2 class="text-3xl font-light text-gray-900">
-                            Confidence infrastructure for AI
-                        </h2>
-                        <span class="text-[10px] text-gray-400 uppercase tracking-wider">Insurance Built the Modern World</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm leading-relaxed text-gray-600 mb-24">
-                        <p>
-                            We are an AI agent standards & insurance company based in San Francisco.
-                        </p>
-                        <div class="space-y-6">
-                            <p>
-                                We built the modern world with American ingenuity, free markets, and the courage to act in the face of uncertainty. Railroads, capital markets, the internet and the built world flourished after people and institutions bet money on their safety.
-                            </p>
-                            <p>
-                                The most powerful technology in human history is reshaping our world. Every day, companies are racing to deploy AI. Enterprise leaders see the inevitable transformation. But they hesitate on one question: "How do we know this is secure?"
-                            </p>
-                        </div>
-                        <div class="space-y-6">
-                            <p>
-                                Legal teams fear liability. Security leaders face novel attack vectors. Procurement teams can't compare providers. Over 1,000 AI-related bills have been introduced in U.S. state legislatures in 2025 alone. Decisions stall amid bureaucratic gridlock, while the technology advances at breakneck pace.
-                            </p>
-                            <p>
-                                We are building the infrastructure to accelerate AI adoption by certifying and insuring AI agents. Insurance built the modern world once. It must do so again.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Featured In -->
-                    <div class="bg-gray-50 rounded-sm p-8 flex items-center justify-between">
-                        <span class="text-[10px] text-gray-400 uppercase tracking-wider mr-8">Featured in :</span>
-                        <div class="flex-1 flex justify-between items-center opacity-60 grayscale">
-                            <span class="font-serif text-xl font-bold">The New York Times</span>
-                            <span class="font-sans text-xl font-bold">NBC</span>
-                            <span class="font-serif text-lg">Reinsurance News</span>
-                            <span class="font-serif text-lg">FINANCIAL TIMES</span>
-                            <span class="font-serif text-lg">FORTUNE</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- AIUC-1 Dark Section -->
-                <section class="bg-[#050A18] text-white rounded-sm overflow-hidden relative min-h-[400px] flex items-center">
-                    <!-- Background Graphic -->
-                    <div class="absolute inset-0 opacity-30">
-                        <div class="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
-                         <!-- Abstract globe/mesh placeholder -->
-                        <svg class="absolute bottom-0 w-full h-full text-blue-900/20" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <path d="M0 100 Q 50 50 100 100" fill="none" stroke="currentColor" stroke-width="0.5" />
-                            <path d="M0 100 Q 50 40 100 100" fill="none" stroke="currentColor" stroke-width="0.5" />
-                            <path d="M0 100 Q 50 30 100 100" fill="none" stroke="currentColor" stroke-width="0.5" />
+                <!-- Strategic Section -->
+                <section class="bg-gray-950 text-white rounded-sm p-20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+                         <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path d="M0 0 L100 0 L100 100 Z" fill="currentColor" />
                         </svg>
                     </div>
-
-                    <div class="relative z-10 p-16 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
                         <div>
-                            <h2 class="text-3xl font-light mb-6">
-                                AIUC-1 is the world's first<br>standard for AI agents
+                            <span class="text-primary-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-8 block">Market Strategy</span>
+                            <h2 class="text-4xl font-light mb-8 leading-tight">
+                                Your edge in the <br><span class="italic">compliance race.</span>
                             </h2>
-                            <p class="text-sm text-gray-400 mb-8 max-w-md">
-                                AIUC-1 covers data & privacy, security, safety, reliability, accountability and societal risks.
+                            <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-md">
+                                GPUs are fast, but audits aren't. General purpose and high-risk AI providers face early deadlines and real liability. AIA Conformity helps you move faster—with evidence that stands up to regulators.
                             </p>
-                            <button class="bg-white text-black px-6 py-2 text-xs font-medium rounded-sm hover:bg-gray-200 transition-colors">
-                                Explore AIUC-1
-                            </button>
+                            <div class="flex gap-4">
+                                <button class="bg-primary-600 text-white px-8 py-3 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-primary-500 transition-colors">
+                                    Join Waitlist
+                                </button>
+                                <button class="border border-white/20 text-white px-8 py-3 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-white/10 transition-colors">
+                                    View Roadmap
+                                </button>
+                            </div>
                         </div>
-                        <div class="flex justify-end">
-                            <div class="w-48 h-64 bg-gradient-to-br from-gray-200 to-gray-400 rounded-lg p-1 shadow-2xl rotate-3 transform hover:rotate-0 transition-transform duration-500">
-                                <div class="w-full h-full bg-white/10 backdrop-blur-md border border-white/20 rounded flex flex-col items-center justify-between p-4">
-                                    <div class="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center">
-                                        <div class="w-8 h-8 rounded-full bg-white/20"></div>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="text-[10px] uppercase tracking-widest text-white/70 mb-1">Standard</div>
-                                        <div class="text-xl font-bold text-white tracking-tighter">AIUC-1</div>
-                                        <div class="text-[8px] uppercase tracking-wider text-white/50 mt-1">Certification</div>
-                                    </div>
-                                    <div class="w-full h-8 bg-white/10 rounded-sm"></div>
-                                </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
+                                <div class="text-3xl font-light text-primary-400 mb-2">2026</div>
+                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Compliance Milestone</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
+                                <div class="text-3xl font-light text-primary-400 mb-2">GPAI</div>
+                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Early Deadlines</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
+                                <div class="text-3xl font-light text-primary-400 mb-2">CE</div>
+                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Marking Ready</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
+                                <div class="text-3xl font-light text-primary-400 mb-2">ISO</div>
+                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">42001 Alignment</div>
                             </div>
                         </div>
                     </div>
@@ -287,73 +260,73 @@
                 <section>
                     <div class="flex justify-between items-baseline mb-16 border-b border-gray-100 pb-4">
                         <h2 class="text-3xl font-light text-gray-900">
-                            Embrace AI with confidence
+                            Trusted by legal and product teams
                         </h2>
-                        <span class="text-[10px] text-gray-400 uppercase tracking-wider">Testimonials</span>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">Feedback</span>
                     </div>
 
-                    <div class="relative">
-                        <div class="flex gap-8 overflow-hidden">
-                            <div class="w-full md:w-[800px] shrink-0 bg-gray-50 flex">
-                                <div class="w-1/3 shrink-0">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Phil Venables" class="w-full h-full object-cover grayscale" />
+                    <div class="bg-primary-50/50 rounded-sm overflow-hidden">
+                        {#each testimonials as testimonial}
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/3 aspect-[3/4]">
+                                    <img src={testimonial.img} alt={testimonial.author} class="w-full h-full object-cover grayscale contrast-125" />
                                 </div>
-                                <div class="w-2/3 p-12 flex flex-col justify-center">
-                                    <blockquote class="text-xl font-light leading-relaxed mb-8">
-                                        "We need a SOC 2 for AI agents - a familiar, actionable standard for security and trust."
+                                <div class="md:w-2/3 p-16 flex flex-col justify-center">
+                                    <div class="text-primary-600 mb-8">
+                                        <svg class="w-12 h-12 opacity-20" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8v8H6v2h4v4H4v-4h2v-2H2V8h8zm14 0v8h-4v2h4v4h-6v-4h2v-2h-4V8h8z"/></svg>
+                                    </div>
+                                    <blockquote class="text-2xl font-light leading-relaxed mb-10 text-gray-800">
+                                        "{testimonial.quote}"
                                     </blockquote>
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-4 h-4 bg-yellow-400 rounded-full"></div> <!-- Placeholder for Google Cloud logo -->
-                                        <span class="text-xs font-semibold text-gray-500">Google Cloud</span>
-                                    </div>
-                                    <div class="mt-2">
-                                        <div class="font-medium">Phil Venables</div>
-                                        <div class="text-xs text-gray-500">Former CISO</div>
+                                    <div>
+                                        <div class="font-bold text-gray-900 uppercase tracking-widest text-sm">{testimonial.author}</div>
+                                        <div class="text-xs text-gray-500 mt-1">{testimonial.role} — {testimonial.company}</div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Next slide preview -->
-                            <div class="w-1/3 shrink-0 opacity-50">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" alt="Next testimonial" class="w-full h-full object-cover grayscale" />
-                            </div>
-                        </div>
-                        
-                        <!-- Navigation Button -->
-                        <button class="absolute top-0 right-0 -mt-12 w-8 h-8 bg-black text-white flex items-center justify-center hover:bg-gray-800">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </button>
+                        {/each}
                     </div>
                 </section>
 
-                <!-- Read More / Articles -->
+                <!-- Articles -->
                 <section>
                     <div class="flex justify-between items-baseline mb-16 border-b border-gray-100 pb-4">
                         <h2 class="text-3xl font-light text-gray-900">
-                            Read more
+                            Compliance Intelligence
                         </h2>
-                        <span class="text-[10px] text-gray-400 uppercase tracking-wider">Articles</span>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">Resources</span>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {#each articles as article}
                             <div class="group cursor-pointer">
-                                <div class="relative aspect-square mb-6 overflow-hidden {article.bg} flex items-center justify-center">
-                                    <span class="absolute top-4 left-4 text-[10px] uppercase tracking-wider bg-white/50 px-2 py-1 backdrop-blur-sm">{article.tag}</span>
-                                    <!-- Use text overlay instead of image if image fails, but styling div with bg color -->
-                                    <div class="text-center p-4">
-                                        <!-- Placeholder graphic -->
-                                        <div class="text-2xl font-serif italic opacity-50">{article.title.split(' ')[0]}</div>
-                                    </div>
+                                <div class="relative aspect-[4/5] mb-6 overflow-hidden {article.bg} rounded-sm">
+                                    <img src={article.img} alt={article.title} class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700 opacity-80" />
+                                    <span class="absolute top-4 left-4 text-[9px] font-bold uppercase tracking-widest bg-white px-2 py-1 shadow-sm">{article.tag}</span>
                                 </div>
-                                <h3 class="text-lg font-normal mb-3 leading-tight group-hover:underline decoration-1 underline-offset-4">
+                                <h3 class="text-lg font-medium mb-3 leading-tight group-hover:text-primary-600 transition-colors">
                                     {article.title}
                                 </h3>
                                 <p class="text-xs text-gray-500 mb-4 leading-relaxed">
                                     {article.desc}
                                 </p>
-                                <a href="#" class="text-xs font-medium underline decoration-1 underline-offset-4">Read more</a>
+                                <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-primary-600 border-b border-primary-600 pb-1">Read Analysis</a>
                             </div>
                         {/each}
+                    </div>
+                </section>
+
+                <!-- Final CTA -->
+                <section class="border-t border-gray-100 pt-32 pb-16 text-center">
+                    <h2 class="text-4xl md:text-5xl font-light mb-8">Ready for the AI Act?</h2>
+                    <p class="text-gray-500 mb-12 max-w-xl mx-auto leading-relaxed">
+                        Join our waitlist for early access, legal-grade documentation templates, and exclusive partner offers from European assessors and certifiers.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                        <input type="email" placeholder="Enter your work email" class="px-6 py-3 border border-gray-200 rounded-sm w-full md:w-80 text-sm focus:outline-none focus:border-primary-600" />
+                        <button class="bg-primary-900 text-white px-10 py-3 text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-primary-800 transition-colors w-full md:w-auto">
+                            Join Waitlist
+                        </button>
                     </div>
                 </section>
 
@@ -363,51 +336,120 @@
 
     <!-- Footer -->
     <footer class="bg-white pt-32 pb-12 border-t border-gray-100 relative overflow-hidden">
-        <!-- Large Background Watermark -->
-        <div class="absolute left-0 bottom-0 text-[20vw] font-bold text-gray-50 leading-none select-none pointer-events-none -mb-12 -ml-12">
-            AIUC
+        <div class="absolute left-0 bottom-0 text-[15vw] font-black text-gray-50 leading-none select-none pointer-events-none -mb-8 -ml-8 uppercase tracking-tighter">
+            Conformity
         </div>
 
         <div class="max-w-[1600px] mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-end md:items-center mb-24">
-                <div class="text-lg font-light">Move with confidence</div>
-                <div class="text-lg font-light underline decoration-1 underline-offset-4">AIUC.COM</div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-                <div class="md:col-span-6">
-                    <!-- Logo -->
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-8 h-8 rounded-full border border-black flex items-center justify-center">
-                            <div class="w-1 h-1 bg-black rounded-full"></div>
-                        </div>
-                        <div class="text-sm font-medium leading-tight">
-                            Artificial Intelligence<br>Underwriting Company
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
+                <div class="md:col-span-4">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-6 h-6 bg-primary-600 rounded-sm flex items-center justify-center text-white font-bold text-sm">C</div>
+                        <div class="text-xs font-bold tracking-tight uppercase">AIA Conformity</div>
                     </div>
+                    <p class="text-sm text-gray-500 leading-relaxed max-w-xs">
+                        The EU-focused RegTech platform dedicated to provable AI Act conformity and ISO 42001 alignment.
+                    </p>
                 </div>
                 
-                <div class="md:col-span-6 flex flex-col md:flex-row justify-between items-end md:items-end gap-8">
-                    <div class="text-[10px] text-gray-400">
-                        © 2025 AIUC
+                <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-6">Platform</h4>
+                        <ul class="text-xs text-gray-500 space-y-4">
+                            <li><a href="#" class="hover:text-primary-600">Inventory</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Legal Logic</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Documentation</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Integrations</a></li>
+                        </ul>
                     </div>
-                    
-                    <div class="flex gap-8 text-[10px] font-medium uppercase tracking-wide">
-                        <div class="flex flex-col gap-2">
-                            <a href="#">Team</a>
-                            <a href="#">Research</a>
-                            <a href="#">Contact</a>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <a href="#">Terms</a>
-                            <a href="#">Privacy Policy</a>
-                        </div>
+                    <div>
+                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-6">Resources</h4>
+                        <ul class="text-xs text-gray-500 space-y-4">
+                            <li><a href="#" class="hover:text-primary-600">AIA Guide</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Annex IV Templates</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Risk Register</a></li>
+                            <li><a href="#" class="hover:text-primary-600">API Docs</a></li>
+                        </ul>
                     </div>
+                    <div>
+                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-6">Company</h4>
+                        <ul class="text-xs text-gray-500 space-y-4">
+                            <li><a href="#" class="hover:text-primary-600">About Us</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Partners</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Contact</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-6">Legal</h4>
+                        <ul class="text-xs text-gray-500 space-y-4">
+                            <li><a href="#" class="hover:text-primary-600">Privacy</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Terms</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-gray-100 gap-8">
+                <div class="text-[10px] text-gray-400 font-medium uppercase tracking-widest">
+                    © 2025 AIA Conformity. All rights reserved.
+                </div>
+                <div class="flex gap-8">
+                    <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 </div>
+
+<style>
+    /* Custom scrollbar hide for clean look */
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    
+    :global(html) {
+        scroll-behavior: smooth;
+    }
+
+    /* Primary color utility classes based on brand_colors */
+    .text-primary-50 { color: oklch(0.977 0.013 236.62); }
+    .text-primary-100 { color: oklch(0.951 0.026 236.824); }
+    .text-primary-200 { color: oklch(0.901 0.058 230.902); }
+    .text-primary-300 { color: oklch(0.828 0.111 230.318); }
+    .text-primary-400 { color: oklch(0.746 0.16 232.661); }
+    .text-primary-500 { color: oklch(0.685 0.169 237.323); }
+    .text-primary-600 { color: oklch(0.588 0.158 241.966); }
+    .text-primary-700 { color: oklch(0.5 0.134 242.749); }
+    .text-primary-800 { color: oklch(0.443 0.11 240.79); }
+    .text-primary-900 { color: oklch(0.391 0.09 240.876); }
+    .text-primary-950 { color: oklch(0.293 0.066 243.157); }
+
+    .bg-primary-50 { background-color: oklch(0.977 0.013 236.62); }
+    .bg-primary-100 { background-color: oklch(0.951 0.026 236.824); }
+    .bg-primary-200 { background-color: oklch(0.901 0.058 230.902); }
+    .bg-primary-300 { background-color: oklch(0.828 0.111 230.318); }
+    .bg-primary-400 { background-color: oklch(0.746 0.16 232.661); }
+    .bg-primary-500 { background-color: oklch(0.685 0.169 237.323); }
+    .bg-primary-600 { background-color: oklch(0.588 0.158 241.966); }
+    .bg-primary-700 { background-color: oklch(0.5 0.134 242.749); }
+    .bg-primary-800 { background-color: oklch(0.443 0.11 240.79); }
+    .bg-primary-900 { background-color: oklch(0.391 0.09 240.876); }
+    .bg-primary-950 { background-color: oklch(0.293 0.066 243.157); }
+
+    .border-primary-100 { border-color: oklch(0.951 0.026 236.824); }
+    .border-primary-200 { border-color: oklch(0.901 0.058 230.902); }
+    .border-primary-600 { border-color: oklch(0.588 0.158 241.966); }
+
+    .selection\:bg-primary-100::selection { background-color: oklch(0.951 0.026 236.824); }
+</style>
 
 <style>
     /* Custom scrollbar hide for clean look */
