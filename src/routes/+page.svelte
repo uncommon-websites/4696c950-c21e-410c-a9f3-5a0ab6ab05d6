@@ -73,7 +73,9 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
         <div class="max-w-[1600px] mx-auto px-6 py-6 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-primary-600 rounded-sm flex items-center justify-center text-white font-bold text-xl">C</div>
+                <svg width="32" height="32" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32.9111 0C27.4958 0 22.3024 2.14748 18.4732 5.97001L-0.00390625 24.415V32.8579C-0.00390625 38.8228 2.56275 44.1892 6.65372 47.9167C2.56275 51.6441 -0.00390625 57.0105 -0.00390625 62.9754V71.4184L18.4732 89.8634C22.3024 93.686 27.4958 95.8333 32.9111 95.8333C38.8864 95.8333 44.2622 93.2712 47.9961 89.1873C51.73 93.2712 57.1058 95.8333 63.0811 95.8333C68.4964 95.8333 73.6898 93.686 77.519 89.8634L95.9961 71.4184V62.9754C95.9961 57.0105 93.4295 51.6441 89.3385 47.9167C93.4295 44.1892 95.9961 38.8228 95.9961 32.8579V24.415L77.519 5.97001C73.6898 2.14748 68.4964 0 63.0811 0C57.1058 0 51.73 2.5622 47.9961 6.64607C44.2622 2.5622 38.8864 0 32.9111 0ZM61.8172 47.9167C61.5871 47.707 61.3612 47.4916 61.1399 47.2708L47.9961 34.1497L34.8523 47.2708C34.631 47.4916 34.4051 47.707 34.175 47.9167C34.4051 48.1263 34.631 48.3417 34.8523 48.5626L47.9961 61.6836L61.1399 48.5626C61.3612 48.3417 61.5871 48.1263 61.8172 47.9167ZM53.3294 71.4184V75.4505C53.3294 80.8268 57.6955 85.1853 63.0811 85.1853C65.6673 85.1853 68.1477 84.1596 69.9765 82.334L85.3295 67.0076V62.9754C85.3295 57.5992 80.9635 53.2407 75.5779 53.2407C72.9916 53.2407 70.5112 54.2663 68.6824 56.092L53.3294 71.4184ZM42.6628 71.4184L27.3098 56.092C25.481 54.2663 23.0007 53.2407 20.4144 53.2407C15.0287 53.2407 10.6628 57.5992 10.6628 62.9754V67.0076L26.0157 82.334C27.8445 84.1596 30.3249 85.1853 32.9111 85.1853C38.2967 85.1853 42.6628 80.8268 42.6628 75.4505V71.4184ZM42.6628 20.3828V24.415L27.3098 39.7414C25.481 41.567 23.0007 42.5926 20.4144 42.5926C15.0287 42.5926 10.6628 38.2341 10.6628 32.8579V28.8257L26.0157 13.4994C27.8445 11.6738 30.3249 10.6482 32.9111 10.6482C38.2967 10.6482 42.6628 15.0065 42.6628 20.3828ZM68.6824 39.7414L53.3294 24.415V20.3828C53.3294 15.0065 57.6955 10.6482 63.0811 10.6482C65.6673 10.6482 68.1477 11.6738 69.9765 13.4994L85.3295 28.8257V32.8579C85.3295 38.2341 80.9635 42.5926 75.5779 42.5926C72.9916 42.5926 70.5112 41.567 68.6824 39.7414Z" fill="currentColor"/>
+                </svg>
                 <a href="/" class="text-sm font-bold tracking-tight uppercase">
                     AIA Conformity
                 </a>
@@ -240,37 +242,7 @@
                                 <div class="text-3xl font-light text-primary-400 mb-2">2026</div>
                                 <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Compliance Milestone</div>
                             </div>
-                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
-                                <div class="text-3xl font-light text-primary-400 mb-2">GPAI</div>
-                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Early Deadlines</div>
-                            </div>
-                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
-                                <div class="text-3xl font-light text-primary-400 mb-2">CE</div>
-                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Marking Ready</div>
-                            </div>
-                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
-                                <div class="text-3xl font-light text-primary-400 mb-2">ISO</div>
-                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">42001 Alignment</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Testimonials -->
-                <section>
-                    <div class="flex justify-between items-baseline mb-16 border-b border-gray-100 pb-4">
-                        <h2 class="text-3xl font-light text-gray-900">
-                            Trusted by legal and product teams
-                        </h2>
-                        <span class="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">Feedback</span>
-                    </div>
-
-                    <div class="bg-primary-50/50 rounded-sm overflow-hidden">
-                        {#each testimonials as testimonial}
-                            <div class="flex flex-col md:flex-row">
-                                <div class="md:w-1/3 aspect-[3/4]">
-                                    <img src={testimonial.img} alt={testimonial.author} class="w-full h-full object-cover grayscale contrast-125" />
-                                </div>
+                            <div class="bg-white/5 backdrop-blur-sm p-8 b                 </div>
                                 <div class="md:w-2/3 p-16 flex flex-col justify-center">
                                     <div class="text-primary-600 mb-8">
                                         <svg class="w-12 h-12 opacity-20" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8v8H6v2h4v4H4v-4h2v-2H2V8h8zm14 0v8h-4v2h4v4h-6v-4h2v-2h-4V8h8z"/></svg>
@@ -344,7 +316,9 @@
             <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
                 <div class="md:col-span-4">
                     <div class="flex items-center gap-3 mb-8">
-                        <div class="w-6 h-6 bg-primary-600 rounded-sm flex items-center justify-center text-white font-bold text-sm">C</div>
+                        <svg width="24" height="24" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M32.9111 0C27.4958 0 22.3024 2.14748 18.4732 5.97001L-0.00390625 24.415V32.8579C-0.00390625 38.8228 2.56275 44.1892 6.65372 47.9167C2.56275 51.6441 -0.00390625 57.0105 -0.00390625 62.9754V71.4184L18.4732 89.8634C22.3024 93.686 27.4958 95.8333 32.9111 95.8333C38.8864 95.8333 44.2622 93.2712 47.9961 89.1873C51.73 93.2712 57.1058 95.8333 63.0811 95.8333C68.4964 95.8333 73.6898 93.686 77.519 89.8634L95.9961 71.4184V62.9754C95.9961 57.0105 93.4295 51.6441 89.3385 47.9167C93.4295 44.1892 95.9961 38.8228 95.9961 32.8579V24.415L77.519 5.97001C73.6898 2.14748 68.4964 0 63.0811 0C57.1058 0 51.73 2.5622 47.9961 6.64607C44.2622 2.5622 38.8864 0 32.9111 0ZM61.8172 47.9167C61.5871 47.707 61.3612 47.4916 61.1399 47.2708L47.9961 34.1497L34.8523 47.2708C34.631 47.4916 34.4051 47.707 34.175 47.9167C34.4051 48.1263 34.631 48.3417 34.8523 48.5626L47.9961 61.6836L61.1399 48.5626C61.3612 48.3417 61.5871 48.1263 61.8172 47.9167ZM53.3294 71.4184V75.4505C53.3294 80.8268 57.6955 85.1853 63.0811 85.1853C65.6673 85.1853 68.1477 84.1596 69.9765 82.334L85.3295 67.0076V62.9754C85.3295 57.5992 80.9635 53.2407 75.5779 53.2407C72.9916 53.2407 70.5112 54.2663 68.6824 56.092L53.3294 71.4184ZM42.6628 71.4184L27.3098 56.092C25.481 54.2663 23.0007 53.2407 20.4144 53.2407C15.0287 53.2407 10.6628 57.5992 10.6628 62.9754V67.0076L26.0157 82.334C27.8445 84.1596 30.3249 85.1853 32.9111 85.1853C38.2967 85.1853 42.6628 80.8268 42.6628 75.4505V71.4184ZM42.6628 20.3828V24.415L27.3098 39.7414C25.481 41.567 23.0007 42.5926 20.4144 42.5926C15.0287 42.5926 10.6628 38.2341 10.6628 32.8579V28.8257L26.0157 13.4994C27.8445 11.6738 30.3249 10.6482 32.9111 10.6482C38.2967 10.6482 42.6628 15.0065 42.6628 20.3828ZM68.6824 39.7414L53.3294 24.415V20.3828C53.3294 15.0065 57.6955 10.6482 63.0811 10.6482C65.6673 10.6482 68.1477 11.6738 69.9765 13.4994L85.3295 28.8257V32.8579C85.3295 38.2341 80.9635 42.5926 75.5779 42.5926C72.9916 42.5926 70.5112 41.567 68.6824 39.7414Z" fill="currentColor"/>
+                        </svg>
                         <div class="text-xs font-bold tracking-tight uppercase">AIA Conformity</div>
                     </div>
                     <p class="text-sm text-gray-500 leading-relaxed max-w-xs">
@@ -417,45 +391,6 @@
     
     :global(html) {
         scroll-behavior: smooth;
-    }
-
-    /* Primary color utility classes based on brand_colors */
-    .text-primary-50 { color: oklch(0.977 0.013 236.62); }
-    .text-primary-100 { color: oklch(0.951 0.026 236.824); }
-    .text-primary-200 { color: oklch(0.901 0.058 230.902); }
-    .text-primary-300 { color: oklch(0.828 0.111 230.318); }
-    .text-primary-400 { color: oklch(0.746 0.16 232.661); }
-    .text-primary-500 { color: oklch(0.685 0.169 237.323); }
-    .text-primary-600 { color: oklch(0.588 0.158 241.966); }
-    .text-primary-700 { color: oklch(0.5 0.134 242.749); }
-    .text-primary-800 { color: oklch(0.443 0.11 240.79); }
-    .text-primary-900 { color: oklch(0.391 0.09 240.876); }
-    .text-primary-950 { color: oklch(0.293 0.066 243.157); }
-
-    .bg-primary-50 { background-color: oklch(0.977 0.013 236.62); }
-    .bg-primary-100 { background-color: oklch(0.951 0.026 236.824); }
-    .bg-primary-200 { background-color: oklch(0.901 0.058 230.902); }
-    .bg-primary-300 { background-color: oklch(0.828 0.111 230.318); }
-    .bg-primary-400 { background-color: oklch(0.746 0.16 232.661); }
-    .bg-primary-500 { background-color: oklch(0.685 0.169 237.323); }
-    .bg-primary-600 { background-color: oklch(0.588 0.158 241.966); }
-    .bg-primary-700 { background-color: oklch(0.5 0.134 242.749); }
-    .bg-primary-800 { background-color: oklch(0.443 0.11 240.79); }
-    .bg-primary-900 { background-color: oklch(0.391 0.09 240.876); }
-    .bg-primary-950 { background-color: oklch(0.293 0.066 243.157); }
-
-    .border-primary-100 { border-color: oklch(0.951 0.026 236.824); }
-    .border-primary-200 { border-color: oklch(0.901 0.058 230.902); }
-    .border-primary-600 { border-color: oklch(0.588 0.158 241.966); }
-
-    .selection\:bg-primary-100::selection { background-color: oklch(0.951 0.026 236.824); }
-</style>
-
-<style>
-    /* Custom scrollbar hide for clean look */
-    ::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
     }
 </style>
 
