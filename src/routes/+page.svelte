@@ -152,7 +152,16 @@
                 <section>
                     <div class="flex justify-between items-baseline mb-24 border-b border-gray-100 pb-4">
                         <h2 class="text-4xl font-light text-gray-900 max-w-2xl leading-tight">
-                            Compliance is now a product, <br><span class="text-pri text-primary-600 font-bold shrink-0">01</div>
+                            Compliance is now a product, <br><span class="italic font-serif">not a process.</span>
+                        </h2>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">Features</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                        <div class="space-y-16">
+                            <div class="group">
+                                <div class="flex gap-6 items-start">
+                                    <div class="w-10 h-10 rounded-full border border-primary-200 flex items-center justify-center text-primary-600 font-bold shrink-0">01</div>
                                     <div>
                                         <h3 class="text-xl font-medium mb-4">Automated AI Inventory</h3>
                                         <p class="text-gray-500 leading-relaxed text-sm">
