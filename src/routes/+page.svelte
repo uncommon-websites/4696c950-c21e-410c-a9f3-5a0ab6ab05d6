@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
     // Partner data - Law firms, certifiers, and notified bodies
     const partners = [
         { name: 'TÜV SÜD', src: '' },
