@@ -73,8 +73,8 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
         <div class="max-w-[1600px] mx-auto px-6 py-6 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <svg width="32" height="32" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32.9111 0C27.4958 0 22.3024 2.14748 18.4732 5.97001L-0.00390625 24.415V32.8579C-0.00390625 38.8228 2.56275 44.1892 6.65372 47.9167C2.56275 51.6441 -0.00390625 57.0105 -0.00390625 62.9754V71.4184L18.4732 89.8634C22.3024 93.686 27.4958 95.8333 32.9111 95.8333C38.8864 95.8333 44.2622 93.2712 47.9961 89.1873C51.73 93.2712 57.1058 95.8333 63.0811 95.8333C68.4964 95.8333 73.6898 93.686 77.519 89.8634L95.9961 71.4184V62.9754C95.9961 57.0105 93.4295 51.6441 89.3385 47.9167C93.4295 44.1892 95.9961 38.8228 95.9961 32.8579V24.415L77.519 5.97001C73.6898 2.14748 68.4964 0 63.0811 0C57.1058 0 51.73 2.5622 47.9961 6.64607C44.2622 2.5622 38.8864 0 32.9111 0ZM61.8172 47.9167C61.5871 47.707 61.3612 47.4916 61.1399 47.2708L47.9961 34.1497L34.8523 47.2708C34.631 47.4916 34.4051 47.707 34.175 47.9167C34.4051 48.1263 34.631 48.3417 34.8523 48.5626L47.9961 61.6836L61.1399 48.5626C61.3612 48.3417 61.5871 48.1263 61.8172 47.9167ZM53.3294 71.4184V75.4505C53.3294 80.8268 57.6955 85.1853 63.0811 85.1853C65.6673 85.1853 68.1477 84.1596 69.9765 82.334L85.3295 67.0076V62.9754C85.3295 57.5992 80.9635 53.2407 75.5779 53.2407C72.9916 53.2407 70.5112 54.2663 68.6824 56.092L53.3294 71.4184ZM42.6628 71.4184L27.3098 56.092C25.481 54.2663 23.0007 53.2407 20.4144 53.2407C15.0287 53.2407 10.6628 57.5992 10.6628 62.9754V67.0076L26.0157 82.334C27.8445 84.1596 30.3249 85.1853 32.9111 85.1853C38.2967 85.1853 42.6628 80.8268 42.6628 75.4505V71.4184ZM42.6628 20.3828V24.415L27.3098 39.7414C25.481 41.567 23.0007 42.5926 20.4144 42.5926C15.0287 42.5926 10.6628 38.2341 10.6628 32.8579V28.8257L26.0157 13.4994C27.8445 11.6738 30.3249 10.6482 32.9111 10.6482C38.2967 10.6482 42.6628 15.0065 42.6628 20.3828ZM68.6824 39.7414L53.3294 24.415V20.3828C53.3294 15.0065 57.6955 10.6482 63.0811 10.6482C65.6673 10.6482 68.1477 11.6738 69.9765 13.4994L85.3295 28.8257V32.8579C85.3295 38.2341 80.9635 42.5926 75.5779 42.5926C72.9916 42.5926 70.5112 41.567 68.6824 39.7414Z" fill="currentColor"/>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.0473 17.8386L5.69453 18.9586V18.9601H18.3003L18.9314 17.84H6.34063L6.82626 16.9993H19.4308L20.078 15.8807H7.47237L7.95715 15.0414H16.0358L16.0366 15.0429L16.0375 15.0414H20.5603L20.5612 15.0429L21.2084 13.9228L21.208 13.922L21.2084 13.9213H21.2075L14.9084 3.00677L14.9106 3.00296L14.9062 3.00296L13.6177 3.00296L5.0473 17.8386ZM14.261 4.12767L13.7751 4.96887L18.9438 13.9213H19.9139L14.261 4.12767ZM13.1286 6.08808L12.6467 6.9225L16.6749 13.9006L16.6634 13.9213H17.6511L13.1286 6.08808ZM11.9999 8.04225L8.60411 13.9213H15.3899L11.9999 8.04225ZM6.99833 3.30006C7.33866 3.10343 7.7248 2.99993 8.11786 3L2.30033 13.0776C2.10357 12.7371 2 12.3508 2 11.9575C2 11.5643 2.10357 11.178 2.30033 10.8375L6.17916 4.12006C6.37543 3.77951 6.65798 3.49669 6.99833 3.30006ZM9.08869 3H10.3816L3.43223 15.0384L2.785 13.9184L9.08869 3ZM11.3509 3H12.6424L4.56262 16.9963L3.91691 15.8777L11.3509 3ZM21.7064 13.0598C21.8988 12.7254 22 12.3463 22 11.9605C22 11.5746 21.8988 11.1956 21.7064 10.8611L17.8039 4.10233C17.6108 3.7681 17.3331 3.49057 16.9987 3.2976C16.6644 3.10463 16.2852 3.00302 15.8992 3.00296H15.8741L21.6931 13.082L21.7064 13.0598ZM17.7995 19.7994H6.17916C6.37472 20.1412 6.65692 20.4253 6.99728 20.6232C7.33763 20.8212 7.72414 20.9258 8.11786 20.9269H15.8829C16.2737 20.9261 16.6572 20.8212 16.994 20.6231C17.3309 20.4249 17.6089 20.1406 17.7995 19.7994Z" fill="currentColor"/>
                 </svg>
                 <a href="/" class="text-sm font-bold tracking-tight uppercase">
                     AIA Conformity
@@ -128,6 +128,14 @@
                                 <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-[0.2em] font-bold">
                                     Working with leading legal partners, certifiers, and notified bodies
                                 </p>
+                             e AIA conformity via automated inventory, legal logic, and documentation workflows.
+                            </p>
+
+                            <!-- Logos Card -->
+                            <div class="bg-white/95 backdrop-blur-md p-8 rounded-sm shadow-xl max-w-5xl w-full border border-gray-100">
+                                <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-[0.2em] font-bold">
+                                    Working with leading legal partners, certifiers, and notified bodies
+                                </p>
                                 <div class="grid grid-cols-3 md:grid-cols-7 gap-y-10 gap-x-4 items-center justify-items-center opacity-70 grayscale">
                                     {#each partners as partner}
                                         <div class="h-4 flex items-center justify-center">
@@ -144,16 +152,7 @@
                 <section>
                     <div class="flex justify-between items-baseline mb-24 border-b border-gray-100 pb-4">
                         <h2 class="text-4xl font-light text-gray-900 max-w-2xl leading-tight">
-                            Compliance is now a product, <br><span class="text-primary-600">not a guessing game.</span>
-                        </h2>
-                        <span class="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">The Platform</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-                        <div class="space-y-16">
-                            <div class="group">
-                                <div class="flex gap-6 items-start">
-                                    <div class="w-10 h-10 rounded-full border border-primary-200 flex items-center justify-center text-primary-600 font-bold shrink-0">01</div>
+                            Compliance is now a product, <br><span class="text-pri text-primary-600 font-bold shrink-0">01</div>
                                     <div>
                                         <h3 class="text-xl font-medium mb-4">Automated AI Inventory</h3>
                                         <p class="text-gray-500 leading-relaxed text-sm">
