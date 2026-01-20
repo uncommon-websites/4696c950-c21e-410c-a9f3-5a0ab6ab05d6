@@ -126,14 +126,6 @@
                                 <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-[0.2em] font-bold">
                                     Working with leading legal partners, certifiers, and notified bodies
                                 </p>
-                             e AIA conformity via automated inventory, legal logic, and documentation workflows.
-                            </p>
-
-                            <!-- Logos Card -->
-                            <div class="bg-white/95 backdrop-blur-md p-8 rounded-sm shadow-xl max-w-5xl w-full border border-gray-100">
-                                <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-[0.2em] font-bold">
-                                    Working with leading legal partners, certifiers, and notified bodies
-                                </p>
                                 <div class="grid grid-cols-3 md:grid-cols-7 gap-y-10 gap-x-4 items-center justify-items-center opacity-70 grayscale">
                                     {#each partners as partner}
                                         <div class="h-4 flex items-center justify-center">
@@ -248,7 +240,33 @@
                                 <div class="text-3xl font-light text-primary-400 mb-2">2026</div>
                                 <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Compliance Milestone</div>
                             </div>
-                            <div class="bg-white/5 backdrop-blur-sm p-8 b                 </div>
+                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm">
+                                <div class="text-3xl font-light text-primary-400 mb-2">€35M</div>
+                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Maximum Fine</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-sm col-span-2">
+                                <div class="text-3xl font-light text-primary-400 mb-2">High-Risk</div>
+                                <div class="text-[10px] uppercase font-bold tracking-wider text-gray-500">Priority Systems</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials -->
+                <section>
+                    <div class="flex justify-between items-baseline mb-16 border-b border-gray-100 pb-4">
+                        <h2 class="text-3xl font-light text-gray-900">
+                            Trusted by compliance leaders
+                        </h2>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-[0.3em] font-bold">Testimonials</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-8">
+                        {#each testimonials as testimonial}
+                            <div class="bg-white border border-gray-100 rounded-sm overflow-hidden flex flex-col md:flex-row">
+                                <div class="md:w-1/3 bg-gray-50 flex items-center justify-center p-12">
+                                    <img src={testimonial.img} alt={testimonial.author} class="w-48 h-48 rounded-full object-cover grayscale" />
+                                </div>
                                 <div class="md:w-2/3 p-16 flex flex-col justify-center">
                                     <div class="text-primary-600 mb-8">
                                         <svg class="w-12 h-12 opacity-20" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8v8H6v2h4v4H4v-4h2v-2H2V8h8zm14 0v8h-4v2h4v4h-6v-4h2v-2h-4V8h8z"/></svg>
